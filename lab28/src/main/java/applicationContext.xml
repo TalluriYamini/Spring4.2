@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+	<context:annotation-config />
+
+	<bean id="ao1" class="com.jlc.spring.A" p:a="10" p:msg="AAA" />
+	<bean id="ao2" class="com.jlc.spring.A" p:a="20" p:msg="AAA-A" />
+	<bean id="bo1" class="com.jlc.spring.B">
+		<constructor-arg value="20" />
+		<constructor-arg value="BBB" />
+	</bean>
+	<bean id="bo2" class="com.jlc.spring.B">
+		<constructor-arg value="30" />
+		<constructor-arg value="BBB-B" />
+	</bean>
+
+	<bean id="hello" class="com.jlc.spring.Hello" />
+
+</beans>

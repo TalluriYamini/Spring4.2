@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+	<context:annotation-config />
+
+	<bean
+		class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+		<property name="customEditors">
+			<map>
+				<entry key="com.jlc.spring.StudentID">
+					<value>com.jlc.spring.StudentIDEditor</value>
+				</entry>
+				<entry key="com.jlc.spring.Fee">
+					<value>com.jlc.spring.FeeEditor</value>
+				</entry>
+				<entry key="java.util.List">
+					<value>com.jlc.spring.ListEditor</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<bean id="student" class="com.jlc.spring.Student" p:sid="B99-101"
+		p:sname="Srinivas" p:phone="9999" p:fee="10000,5000,6000"
+		p:emails="aa@jlc.com,bb@jlc.com,cc@jlc.com,dd@jlc.com">
+		<property name="phones">
+			<list>
+				<value>1111</value>
+				<value>2222</value>
+				<value>3333</value>
+			</list>
+		</property>
+	</bean>
+</beans>
