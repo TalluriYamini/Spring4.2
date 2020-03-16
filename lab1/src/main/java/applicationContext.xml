@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+	<bean id="aobj" class="com.jlc.spring.A">
+		<property name="a" value="99"></property>
+		<property name="msg" value="Hello Guys"></property>
+	</bean>
+	<bean id="bobj" class="com.jlc.spring.B">
+		<constructor-arg value="88" />
+		<constructor-arg value="Hai Guys" />
+	</bean>
+	<bean id="hello" class="com.jlc.spring.Hello">
+		<property name="aobj" ref="aobj" />
+		<constructor-arg ref="bobj" />
+	</bean>
+
+</beans>
