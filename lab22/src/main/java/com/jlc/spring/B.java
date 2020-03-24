@@ -10,6 +10,6 @@ public class B extends A{
 	}
 
 	public String toString() {
-		return "" + b + "\t" + str;
+		return "" + b + "\t" + str + "\t" + getMsg() + getA();
 	}
 }

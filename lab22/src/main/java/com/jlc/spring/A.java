@@ -12,6 +12,14 @@ public class A {
 		this.msg = msg;
 	}
 
+	public int getA() {
+		return a;
+	}
+
+	public String getMsg() {
+		return msg;
+	}
+
 	public String toString() {
 		return "" + a + "\t" + msg;
 	}

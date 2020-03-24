@@ -13,6 +13,8 @@ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 	<bean id="bo1" class="com.jlc.spring.B">
 		<constructor-arg value="20" />
 		<constructor-arg value="BBB" />
+			<property name="a" value="11" />
+		<property name="msg" value="AAA-A" />
 	</bean>
 
 	<bean id="hello" class="com.jlc.spring.Hello" autowire="byType" />
